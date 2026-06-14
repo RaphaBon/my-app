@@ -14,5 +14,5 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "✅ Conectado ao PostgreSQL com sucesso!";
 } catch (PDOException $e) {
-    die("❌ Erro na conexão: " . $e->getMessage());
+    die(" Erro na conexão: " . $e->getMessage());
 }
