@@ -1,0 +1,35 @@
+services:
+  php:
+    build: .
+    container_name: app
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/var/www/html
+    depends_on:
+      - postgres
+    networks:
+      - edutech
+    restart: always
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - edutech
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: senha_da_nasa
+      POSTGRES_DB: edutech_db
+
+networks:
+  edutech:
+    driver: bridge
+
+volumes:
+  postgres_data:
+
