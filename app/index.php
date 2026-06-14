@@ -1,7 +1,7 @@
 <?php
 $host = 'postgres_db';
 $port = '5432';
-$dbname = 'educode_db';
+$dbname = 'edutech_db';
 $user = 'postgres';
 $pass = 'senha_da_nasa';
 
