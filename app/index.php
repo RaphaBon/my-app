@@ -5,6 +5,7 @@ $dbname = 'edutech_db';
 $user = 'postgres';
 $pass = 'senha_da_nasa';
 
+
 try {
     $pdo = new PDO(
         "pgsql:host=$host;port=$port;dbname=$dbname",
